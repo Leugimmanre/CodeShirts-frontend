@@ -4,8 +4,8 @@ import Swal from "sweetalert2";
 const OrderDetails = ({order}) => {
   const { _id, customer } = order;
   //console.log(order)
-  if (!customer) {
-    return;
+  if (!order) {
+    return null;
   }
 
   // Delete order
@@ -54,14 +54,16 @@ const OrderDetails = ({order}) => {
             <p className="products">Items Order</p>
             <ul>
               {order.order.map((items) =>
-                <li
-                  className="order-items-datail"
-                  key={order._id + items.product._id}
-                >
-                  <p><span>Item</span>: {items.product.name}</p>
-                  <p><span>Price</span>: ${items.product.price}</p>
-                  <p><span>Quantity</span>: {items.quantity}</p>
-                </li>
+                items.product && (
+                  <li
+                    className="order-items-datail"
+                    key={order._id + items.product._id}
+                  >
+                    <p><span>Item</span>: {items.product.name}</p>
+                    <p><span>Price</span>: ${items.product.price}</p>
+                    <p><span>Quantity</span>: {items.quantity}</p>
+                  </li>
+                )
               )}
             </ul>
           </div>
