@@ -37,8 +37,8 @@ const Customer = ({customer}) => {
     return (
         <li className="customer">
             <div className="info-customer">
-                <p className="name">{name} {lastname}</p>
-                <p className="company">{company}</p>
+                <h2 className="name">{name} {lastname}</h2>
+                <h2 className="company">{company}</h2>
                 <p>{email}</p>
                 <p>{phone}</p>
             </div>

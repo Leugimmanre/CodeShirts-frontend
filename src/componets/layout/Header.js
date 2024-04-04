@@ -22,7 +22,7 @@ const Header = () => {
                 <div className="bar-content  logo">
                     <div className="title-container">
                         <div className="logo-title-container">
-                            <img src={logo} alt="logo"/>
+                            <img src={logo} alt="Application logo"/>
                             <h1>CRM CodeShirts</h1>
                         </div>
                         <p className='description'>Customers, Products and Orders Administrator</p>
